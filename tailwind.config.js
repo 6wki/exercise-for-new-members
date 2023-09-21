@@ -3,7 +3,11 @@ module.exports = {
   mode: "jit",
   content: ["./index.html", "./src/**/*.vue"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        redpink: "#EC3A47",
+      }
+    },
   },
   plugins: [],
 };

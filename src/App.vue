@@ -1,6 +1,11 @@
 <template>
-  <div class="flex min-h-screen items-center justify-center">
-    <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div class="flex min-h-screen items-center justify-center bg-zinc-900">
+    <HelloWorld
+      :profilePicture="cardData.img"
+      :name="cardData.firstName + ' ' + cardData.lastName"
+      :description="cardData.aboutMe"
+      :tags="cardData.tags"
+    />
   </div>
 </template>
 <script setup>
