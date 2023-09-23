@@ -70,7 +70,7 @@
         <!-- Actions -->
         <button class="booking-button">Book Now</button>
         <buttons
-          class="action-button hidden text-redpink md:ml-[32px] md:inline md:text-[14px] lg:text-[16px]"
+          class="action-button hidden cursor-pointer text-redpink md:ml-[32px] md:inline md:text-[14px] lg:text-[16px]"
         >
           Explore Profile
         </buttons>
