@@ -29,8 +29,6 @@
   }
 
   /* Components */
-
-  /* Container */
   .component-container {
     @apply mx-5 flex h-[530px] w-[390px] max-w-screen-xl flex-wrap rounded-[20px] bg-white text-opaqueBlack md:h-[425px] md:w-[666px] md:py-[53px] md:pr-[41px] md:pl-[50px] lg:h-[344px] lg:w-[unset] lg:px-[56px] lg:py-[32px] lg:pl-[10px];
   }
