@@ -1,0 +1,18 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="great-britain-cropped" clip-path="url(#clip0_203_13)">
+<mask id="mask0_203_13" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<circle id="Ellipse 6" cx="12" cy="12" r="12" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_203_13)">
+<path id="Vector" d="M-12 0H36V24H-12V0Z" fill="#012169"/>
+<path id="Vector_2" d="M-12 0V2.6832L30.6336 24H36V21.3168L-6.6336 0.0048H-12V0ZM36 0V2.6832L-6.6336 24H-12V21.3168L30.6336 0H36Z" fill="white"/>
+<path id="Vector_3" d="M8.0016 0V24H15.9984V0H8.0016ZM-12 8.0016V15.9984H36V8.0016H-12Z" fill="white"/>
+<path id="Vector_4" d="M-12 9.6V14.4H36V9.6H-12ZM9.6 0V24H14.4V0H9.6ZM-12 24L3.9984 15.9984H7.584L-8.424 24H-12ZM-12 0L3.9984 8.0016H0.4224L-12 1.7904V0ZM16.4208 8.0016L32.424 0H36L20.0016 8.0016H16.416H16.4208ZM36.0048 24L19.9968 15.9984H23.5728L36 22.2096V24H36.0048Z" fill="#CE2B37"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_203_13">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
