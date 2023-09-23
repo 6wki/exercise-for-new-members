@@ -6,24 +6,21 @@
         <div
           class="relative mt-[-4px] h-[127px] md:mt-[-5px] md:mr-[10px] md:h-[unset] lg:mr-[66px] lg:mt-[unset]"
         >
+          <!-- Picture -->
           <img
             class="scale-[0.7] rounded-full md:mb-9 md:scale-[1.13] lg:scale-[unset]"
             :src="profilePicture"
             :alt="(firstName, lastName)"
           />
-          <img
-            class="back absolute left-[138px] bottom-[-48px] h-10 w-10 rounded-full bg-[#FFCA41] p-2 md:bottom-[30px] md:left-[110px] lg:left-[150px]"
-            :src="star"
-            alt="rank"
-          />
+
+          <!-- Star Icon -->
+          <img class="star-icon" :src="star" alt="rank" />
         </div>
       </div>
 
       <!-- Name & Tags & Flags -->
       <div class="mt-10 h-[10px] w-full md:mt-[unset] md:h-[unset] md:w-[75%]">
-        <div
-          class="mt-[-33px] flex justify-center text-left md:mt-[-13px] md:ml-[33px] md:mb-[33px] md:justify-between md:text-left lg:mb-[17px] lg:mt-[unset] lg:ml-[unset]"
-        >
+        <div class="nameAndFlags-container">
           <!-- Name -->
           <h1 class="text-[28px] font-semibold tracking-[-0.2px] md:text-2xl">
             {{ firstName }} {{ abbreviation }}.
@@ -48,6 +45,8 @@
               <img :src="tag.icon" alt="" />
               <p>{{ tag.text }}</p>
             </li>
+
+            <!-- Number of hidden tags -->
             <li
               v-if="hiddenTagsCount > 0"
               class="flex cursor-pointer gap-2 rounded-2xl bg-red-200 bg-opacity-20 px-2 py-1 text-redpink"
@@ -69,11 +68,7 @@
       <div
         class="mt-[30px] flex w-full flex-col items-center md:mt-[unset] md:ml-[-8px] md:block lg:ml-[25%] lg:mt-[-12%]"
       >
-        <p
-          class="ellipsis-3-lines ellipsis-4-lines mt-3 text-[18px] leading-7 tracking-[0.15px] text-opaqueBlack md:mb-[33px] md:mt-[4.5px] md:text-[16px] lg:mb-[29px] xl:mt-5"
-        >
-          👋🏻 {{ description }}
-        </p>
+        <p class="description">👋🏻 {{ description }}</p>
 
         <!-- Actions -->
         <button
@@ -81,11 +76,11 @@
         >
           Book Now
         </button>
-        <button
-          class="action-button hidden text-redpink md:inline md:px-[32px] md:text-[14px] lg:text-[16px]"
+        <buttons
+          class="action-button hidden text-redpink md:ml-[32px] md:inline md:text-[14px] lg:text-[16px]"
         >
           Explore Profile
-        </button>
+        </buttons>
       </div>
     </div>
   </div>
@@ -195,30 +190,10 @@ export default {
 </script>
 
 <style scoped>
-/* The styles that aren't mentioned here you can find them in the global css */
+/* The styles that aren't mentioned here you can find them in the index css */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 * {
   font-family: "Lato", sans-serif;
-}
-
-@media (min-width: 768px) and (max-width: 1157px) {
-  .ellipsis-3-lines {
-    width: 100%;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
-}
-
-@media (max-width: 767px) {
-  .ellipsis-4-lines {
-    width: 85%;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-  }
 }
 </style>
