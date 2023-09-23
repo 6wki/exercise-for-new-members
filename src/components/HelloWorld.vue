@@ -35,13 +35,9 @@
         </div>
 
         <!-- Tags -->
-
         <div v-if="renderComponent" class="mt-5 md:mt-2">
           <ul class="tags-container">
-            <li
-              v-for="(tag, index) in filteredTags"
-              class="flex h-fit scale-[1.1] cursor-pointer gap-[8px] rounded-2xl bg-red-200 bg-opacity-20 py-1.5 px-4 font-bold tracking-[.1px] text-redpink md:scale-[unset] md:text-[14px]"
-            >
+            <li v-for="(tag, index) in filteredTags" class="tag">
               <img :src="tag.icon" alt="" />
               <p>{{ tag.text }}</p>
             </li>
@@ -64,6 +60,7 @@
           </ul>
         </div>
       </div>
+
       <!-- Description -->
       <div
         class="mt-[30px] flex w-full flex-col items-center md:mt-[unset] md:ml-[-8px] md:block lg:ml-[25%] lg:mt-[-12%]"
@@ -71,11 +68,7 @@
         <p class="description">👋🏻 {{ description }}</p>
 
         <!-- Actions -->
-        <button
-          class="action-button mt-[20px] mb-[-20px] rounded-full bg-redpink px-[20px] py-[14px] text-white md:mt-[unset] md:mb-[unset] md:px-[26px] md:text-[12.5px] lg:px-8 lg:text-[14px]"
-        >
-          Book Now
-        </button>
+        <button class="booking-button">Book Now</button>
         <buttons
           class="action-button hidden text-redpink md:ml-[32px] md:inline md:text-[14px] lg:text-[16px]"
         >
@@ -84,6 +77,7 @@
       </div>
     </div>
   </div>
+
   <!-- Loading Animation -->
   <Loading v-if="isLoading" />
 </template>
@@ -129,6 +123,14 @@ export default {
       renderComponent: true,
       // Initially set to true to show the loading animation
       isLoading: true,
+      // Max tags to show in Desktop
+      desktopTags: 5,
+      // Max tags to show in Tablet
+      tabletTags: 4,
+      // Max tags to show in Mobile
+      mobileTags: 2,
+      // Loading timing
+      loadingTime: 2000,
     };
   },
 
@@ -136,7 +138,7 @@ export default {
     // Simulate an asynchronous action (e.g., fetching data)
     setTimeout(() => {
       this.isLoading = false; // Set isLoading to false to hide the loading animation
-    }, 2000); // Simulate a 2-second loading time (you can adjust this value)
+    }, this.loadingTime); // Simulate a 2-second loading time (you can adjust this value)
   },
   components: {
     Loading,
@@ -170,11 +172,11 @@ export default {
     updateTagsDisplay() {
       const currentWidth = window.innerWidth;
       if (currentWidth >= this.DesktopResponsiveWidth) {
-        this.maxTagsToShow = 5; // Desktop
+        this.maxTagsToShow = this.desktopTags; // Desktop
       } else if (currentWidth >= this.MobileResponsiveWidth) {
-        this.maxTagsToShow = 4; // Tablet
+        this.maxTagsToShow = this.tabletTags; // Tablet
       } else {
-        this.maxTagsToShow = 2; // Mobile
+        this.maxTagsToShow = this.mobileTags; // Mobile
       }
       this.hiddenTagsCount = Math.max(this.tags.length - this.maxTagsToShow, 0);
 

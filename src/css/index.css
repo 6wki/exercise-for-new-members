@@ -30,6 +30,7 @@
 
   /* Components */
 
+  /* Container */
   .component-container {
     @apply mx-5 flex h-[530px] w-[390px] max-w-screen-xl flex-wrap rounded-[20px] bg-white text-opaqueBlack md:h-[425px] md:w-[666px] md:py-[53px] md:pr-[41px] md:pl-[50px] lg:h-[344px] lg:w-[unset] lg:px-[56px] lg:py-[32px] lg:pl-[10px];
   }
@@ -42,11 +43,19 @@
     @apply ml-[-5px] flex flex-wrap justify-center gap-[18px] md:ml-[32px] md:mb-[16px] md:justify-start md:gap-[9px] lg:ml-[unset] lg:gap-[23px] md:[&>*:first-child]:mb-2 lg:[&>*:first-child]:mb-[unset];
   }
 
+  .tag {
+    @apply flex h-fit scale-[1.1] cursor-pointer gap-[8px] rounded-2xl bg-red-200 bg-opacity-20 py-1.5 px-4 font-bold tracking-[.1px] text-redpink md:scale-[unset] md:text-[14px];
+  }
+
   .star-icon {
     @apply absolute left-[138px] bottom-[-48px] h-10 w-10 rounded-full bg-[#FFCA41] p-2 md:bottom-[30px] md:left-[110px] lg:left-[150px];
   }
 
   .nameAndFlags-container {
     @apply mt-[-33px] flex justify-center text-left md:mt-[-13px] md:ml-[33px] md:mb-[33px] md:justify-between md:text-left lg:mb-[17px] lg:mt-[unset] lg:ml-[unset];
+  }
+
+  .booking-button {
+    @apply action-button mt-[20px] mb-[-20px] rounded-full bg-redpink px-[20px] py-[14px] text-white md:mt-[unset] md:mb-[unset] md:px-[26px] md:text-[12.5px] lg:px-8 lg:text-[14px];
   }
 }
