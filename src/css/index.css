@@ -34,7 +34,7 @@
   }
 
   .description {
-    @apply ellipsis-3-lines ellipsis-4-lines mt-3 text-[18px] leading-7 tracking-[0.15px] text-opaqueBlack md:mb-[33px] md:mt-[4.5px] md:text-[16px] lg:mb-[29px] xl:mt-5;
+    @apply ellipsis-3-lines ellipsis-4-lines mt-3 text-[18px] leading-7 tracking-[0.15px]  md:mb-[33px] md:mt-[4.5px] md:text-[16px] lg:mb-[29px] xl:mt-5;
   }
 
   .tags-container {
